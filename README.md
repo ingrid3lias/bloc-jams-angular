@@ -1,6 +1,6 @@
 ## Bloc Jams Angular
 
-My Bloc Jams Angular.
+My Bloc Jams Angular. Don't forget to follow the instructions below before you get started.
 
 ## Configuration
 
