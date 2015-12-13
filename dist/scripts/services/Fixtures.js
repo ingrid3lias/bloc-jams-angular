@@ -19,7 +19,7 @@
 
 
         var albumMarconi = {
-          name: 'The Telephone',
+            name: 'The Telephone',
             artist: 'Guglielmo Marconi',
             label: 'EM',
             year: '1909',
@@ -37,6 +37,13 @@
           return albumPicasso;  
         };
         
+        Fixtures.getCollection = function(numberOfAlbums) {
+            this.albums = [];
+            for(var i = 0; i < numberOfAlbums; i++){
+                this.albums.push(albumPicasso);
+            };
+            return this.albums;
+        };
         
         return Fixtures;
     }
