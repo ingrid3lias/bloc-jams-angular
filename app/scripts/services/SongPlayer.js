@@ -24,8 +24,7 @@
         
         var setSong = function(song) {
             if (currentBuzzObject) {
-                currentBuzzObject.stop();
-                SongPlayer.currentSong.playing = null;
+                stopSong(song);
             }
 
             currentBuzzObject = new buzz.sound(song.audioUrl, {
@@ -45,6 +44,11 @@
         var playSong = function(song){
             currentBuzzObject.play();
             song.playing = true;
+        };
+        
+        var stopSong = function(song){
+            currentBuzzObject.stop();
+            SongPlayer.currentSong.playing = null;
         };
         
         /**
@@ -82,19 +86,36 @@
         };
         
         /**
+        * @function next
+        * @desc Changes the currentSong to the previous song by incrementing the song index
+        */
+        
+        SongPlayer.next = function(){
+            var currentSongIndex = getSongIndex(SongPlayer.currentSong);
+            currentSongIndex++;
+            var song = currentAlbum.songs[currentSongIndex];
+            
+            if(currentSongIndex > currentAlbum.songs.length - 1){
+                stopSong(song);
+            } else {
+                setSong(song);
+                playSong(song);
+            }
+        };
+        
+        /**
         * @function previous
-        * @desc Changes the currentSong to the previous song by decrementing the found song index
+        * @desc Changes the currentSong to the previous song by decrementing the song index
         */
         
         SongPlayer.previous = function(){
           var currentSongIndex = getSongIndex(SongPlayer.currentSong);
             currentSongIndex--;
+            var song = currentAlbum.songs[currentSongIndex];
             
             if(currentSongIndex < 0){
-                currentBuzzObject.stop();
-                SongPlayer.currentSong.playing = null;
+                stopSong(song);
             } else {
-                var song = currentAlbum.songs[currentSongIndex];
                 setSong(song);
                 playSong(song);
             }
