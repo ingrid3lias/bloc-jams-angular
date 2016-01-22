@@ -96,6 +96,10 @@
             SongPlayer.volume = volume;
         };
         
+        SongPlayer.mute = function() {
+            
+            SongPlayer.volume = 0;
+        };
         
         SongPlayer.play = function(song) {
              song = song || SongPlayer.currentSong;
