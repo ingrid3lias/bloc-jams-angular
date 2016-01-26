@@ -1,0 +1,125 @@
+.analytics-view {
+    background-color: rgba(192,192,192,0.5);
+    margin-top: 1rem;
+}
+
+.top-title .analytics-section-title {
+    font-weight: 300;
+    font-size: 2rem;
+    margin: 0.5rem auto;
+}
+
+.analytics-data hr {
+    width: 95%;
+    border-color: rgba(255,255,255,0.5);
+}
+
+.top-title {
+    padding: 0 auto;
+}
+
+
+/* Filter Buttons */
+
+.filter-button .time-filter-text {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.75rem;
+    color: rgba(163,163,163,.5);
+    vertical-align: middle;
+    padding: .5rem .75rem;
+    text-decoration: none;
+    letter-spacing: 0.05rem;
+    position: relative;
+    height: 100%;
+    display: table-cell;
+}   
+
+.filter-button {
+    border: 2px solid rgba(163,163,163,.5);
+    border-radius: 15px;
+    display: inline-block;
+    margin: 1rem 0.5rem;
+    
+}
+
+.filter-button:hover,
+.time-filter-text:hover {
+    border-color: rgb(233,50,117);
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+}
+
+.filter-button:active,
+.time-filter-text:active {
+    border-color: rgb(233,50,117);
+    color: white;
+    font-weight: 500;
+}
+
+/* Number Data Points */
+
+.analytics-number-data {
+    margin: 2.5rem auto;
+}
+
+.number-data-title {
+    font-weight: 300;
+    font-size: 3.75rem;
+    letter-spacing: -.25rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.number-data-title .data-title-measure {
+    font-weight: 100;
+    font-size: .75rem;
+    vertical-align: middle;
+    letter-spacing: normal;
+    padding-left: 0;
+}
+
+.number-data-description {
+    font-weight: 300;
+    font-size: 0.75rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Top Song Chart */
+
+.top-song-list {
+    width: 90%;
+    margin: 1.5rem auto;
+    font-weight: 300;
+    font-size: 0.75rem;
+}
+
+.top-song-item {
+    height: 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.top-song-number {
+    width: 5%;
+    min-width: 30px;
+}
+
+.top-song-title {
+    width: 50%;
+}
+
+.top-song-artist {
+    width: 40%;
+}
+
+.top-song-plays {
+    width: 5%
+}
+
+.top-item-header {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: rgba(255,255,255,0.75);
+}
