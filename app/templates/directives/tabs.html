@@ -1,0 +1,10 @@
+<div class="tab__container">
+  <nav class="tabs__nav" ng-show="tabsNavVisible" ng-animate>
+    <ul class="tabs__nav--list">
+      <li class="tab__list--item" ng-repeat="tabPane in tabPanes" ng-class="{active:tabPane.selected}">
+        <a href="" class="tab__list--item-anchor" ng-click="select(tabPane)">{{tabPane.title}}</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="tab__panes" ng-transclude></div>
+</div>
