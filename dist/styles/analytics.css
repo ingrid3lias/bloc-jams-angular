@@ -19,6 +19,17 @@
 }
 
 
+/* Tab Styles */
+
+
+.tab__pane {
+    display: none;
+}
+
+.tab__pane:active{
+    display: block;
+}
+
 /* Filter Buttons */
 
 .filter-button .time-filter-text {

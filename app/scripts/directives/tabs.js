@@ -15,29 +15,21 @@
     }
 
     function TabsCtrl ($scope) {
-      var vm = this;
-      var tabPanes = $scope.tabPanes = [];
 
-      $scope.tabsNavVisible = !$scope.tabsNavVisible;
+      var panes = $scope.panes = [];
 
-      $scope.select = function (tabPane) {
-
-        angular.forEach(tabPanes, function (tabPane) {
-          tabPane.selected = false;
+      $scope.select = function(pane) {
+        angular.forEach(panes, function(pane) {
+          pane.selected = false;
         });
-
-        tabPane.selected = true;
-        $scope.tabsNavVisible = !$scope.tabsNavVisible;
-      };
-
-      vm.addPane = function (tabPane) {
-        if (tabPanes.length == 0) $scope.select(tabPane);
-        tabPanes.push(tabPane);
-      };
-
-      vm.toggleTabsNav = function () {
-        $scope.tabsNavVisible = !$scope.tabsNavVisible;
+        pane.selected = true;
       }
+
+      this.addPane = function(pane) {
+        if (panes.length == 0) $scope.select(pane);
+        panes.push(pane);
+      }
+
     }
   }
 })();

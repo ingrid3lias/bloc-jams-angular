@@ -1,9 +1,9 @@
 (function () {
   angular
     .module('blocJams')
-    .directive('tabPane', tabPane);
+    .directive('pane', pane);
 
-  function tabPane () {
+  function pane () {
     return {
       require: '^tabs',
       restrict: 'E',
