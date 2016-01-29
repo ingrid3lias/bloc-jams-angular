@@ -30,6 +30,12 @@
     display: block;
 }
 
+.tabbable[title] {
+    font-family: 'Open Sans';
+    font-weight: 500;
+    color:  rgb(233,50,117);
+}
+
 /* Filter Buttons */
 
 .filter-button .time-filter-text {
