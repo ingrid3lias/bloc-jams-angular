@@ -30,10 +30,13 @@
     display: block;
 }
 
-.tabbable[title] {
+a.ng-binding {
+    color: rgb(233,50,117);
     font-family: 'Open Sans';
-    font-weight: 500;
-    color:  rgb(233,50,117);
+}
+
+a.ng-binding.active {
+    color: #333333;
 }
 
 /* Filter Buttons */
@@ -65,7 +68,7 @@
     border-color: rgb(233,50,117);
     cursor: pointer;
     color: white;
-    font-weight: 500;
+    /*font-weight: 500;*/
 }
 
 .filter-button:active,
@@ -81,11 +84,16 @@
     display: inline-block;
 }
 
+.analytics-graph-list li {
+    width: 80px;
+    padding: .5rem;
+    text-align: center;
+}
+
 .analytics-graph-list .analytics-graph-category a {
     text-decoration: none;
     font-weight: 100;
     font-size: .75rem;
-    padding: .5rem;
     color: rgba(163,163,163,.75);
 }
 
@@ -99,17 +107,6 @@
     color: white;
     font-weight: 500;
     border-bottom: 2px solid white;
-}
-
-a::after {
-    display:block;
-    content:attr(title);
-    font-weight:500;
-    height:1px;
-    color:transparent;
-    overflow:hidden;
-    visibility:hidden;
-    margin-bottom:-1px;
 }
 
 /* Number Data Points */
