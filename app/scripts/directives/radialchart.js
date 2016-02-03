@@ -7,7 +7,7 @@
     return {
       restrict: 'E',
       scope: {  },
-      templateUrl: '/templates/directives/radialChart.html',
+      templateUrl: '',
       link: function(scope, element, attrs) {
       }
     }
